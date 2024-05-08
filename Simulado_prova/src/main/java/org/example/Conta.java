@@ -5,8 +5,7 @@ public abstract class Conta implements AtualizarConta{
     private double saldo;
 
 
-    public Conta(){
-    }
+
 
     public Conta(double saldo) {
         this.saldo = saldo;
@@ -16,7 +15,7 @@ public abstract class Conta implements AtualizarConta{
         return saldo;
     }
 
-    private void setSaldo(double saldo) {
+    protected void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
@@ -32,7 +31,7 @@ public abstract class Conta implements AtualizarConta{
         }
     }
     public void atualizarConta(double taxa){
-        setSaldo(getSaldo()+rendimento(taxa));
+        setSaldo(getSaldo() + rendimento(taxa));
     }
-    public  abstract double rendimento(double percentual);
+    public abstract double rendimento(double percentual);
 }
