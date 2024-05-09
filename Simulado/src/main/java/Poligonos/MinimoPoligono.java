@@ -1,12 +1,16 @@
 package Poligonos;
 
-public class MinimoPoligono {
+public abstract class MinimoPoligono implements GeraisParaPoligonos {
 
     private double l3, l2, l1;
 
-    public String getTipo(){
-        return "";
+    public MinimoPoligono(double l3, double l2, double l1) {
+        this.l3 = l3;
+        this.l2 = l2;
+        this.l1 = l1;
     }
+
+    public abstract String getTipo();
 
     public double getL3() {
         return l3;
