@@ -6,6 +6,9 @@ public class ContaPoupanca extends Conta {
         super(saldo);
     }
 
+    public ContaPoupanca() {
+    }
+
     @Override
     public double rendimento(double percentual) {
         return 3 * getSaldo() * percentual / 100;

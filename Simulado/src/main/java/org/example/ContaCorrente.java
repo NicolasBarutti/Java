@@ -6,6 +6,9 @@ public class ContaCorrente extends Conta {
         super(saldo);
     }
 
+    public ContaCorrente() {
+    }
+
     @Override
     public double rendimento(double percentual) {
         return 2 * getSaldo()* percentual/ 100;
