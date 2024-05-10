@@ -1,4 +1,4 @@
-package Poligonos;
+package org.example.Poligonos;
 
 public class Heptagono extends  MinimoPoligono{
 
