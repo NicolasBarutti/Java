@@ -1,8 +1,7 @@
 package org.example;
-import java.time.format.DateTimeFormatter;
-import java.time.LocalDateTime;
-import java.util.Scanner;
 
+import java.util.Scanner;
+import java.time.LocalDate;
 
 
 
@@ -12,16 +11,18 @@ import java.util.Scanner;
 
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("Digite uma data com formato dd MM yyyy ");
+            System.out.println("Digite uma data com formato dd/MM/yyyy ");
 
 
-            DateTimeFormatter dia = DateTimeFormatter.ofPattern("dd");
-            DateTimeFormatter mes = DateTimeFormatter.ofPattern("MM");
-            DateTimeFormatter ano = DateTimeFormatter.ofPattern("yyyy");
-            LocalDateTime now = LocalDateTime.now();
-            System.out.println(dia.format(now));
-            System.out.println(mes.format(now));
-            System.out.println(ano.format(now));
+            String usuarioInforma = scanner.nextLine();
+
+            LocalDate usuarioInformaData = LocalDate.parse(usuarioInforma);
+
+            LocalDate dataAtual = LocalDate.now();
+
+            long diferenca = dataAtual.datesUntil(usuarioInformaData).count();
+
+            System.out.println("O intervalo e de " + diferenca + " de diferença, e a data atual é " + dataAtual);
 
 
         }

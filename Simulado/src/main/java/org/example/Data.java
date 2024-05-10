@@ -25,14 +25,5 @@ public class Data {
         return ano;
     }
 
-    public void acharDias(int dia, int mes, int ano){
-        DateTimeFormatter d = DateTimeFormatter.ofPattern("dd");
-        DateTimeFormatter m = DateTimeFormatter.ofPattern("MM");
-        DateTimeFormatter a = DateTimeFormatter.ofPattern("yyyy");
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(d.format(now));
-        System.out.println(m.format(now));
-        System.out.println(a.format(now));
 
-    }
 }
