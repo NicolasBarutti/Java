@@ -13,19 +13,4 @@ public class exercicio3 {
         return diferenca;
     }
 
-    public static void main(String[] args) {
-
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Digite uma data com formato yyyy-mm-dd ");
-
-
-        String usuarioInforma = scanner.nextLine();
-
-
-        System.out.println(contarDias(usuarioInforma));
-
-
-    }
 }
