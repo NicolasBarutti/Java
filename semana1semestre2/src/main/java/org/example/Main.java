@@ -101,10 +101,21 @@ public class Main {
 //            System.out.println(num);
 //        }
 
-        int [] numeros = new int[10];
-         Arrays.fill(numeros, 5);
-         for (int num : numeros){
-             System.out.println(num);
-         }
+//        int [] numeros = new int[10];
+//         Arrays.fill(numeros, 5);
+//         for (int num : numeros){
+//             System.out.println(num);
+//         }
+
+            // pesquisa binaria
+
+
+            int[] vetor2 = {1, 2, 5, 7, 9};
+
+            int i = Arrays.binarySearch(vetor2, 7);
+
+            System.out.println(vetor2[i]);
+
+
     }
 }
