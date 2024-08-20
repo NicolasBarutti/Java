@@ -9,16 +9,75 @@ public class Main {
 
         //exercicio
 
-        Pessoa pessoa1 = new Pessoa("Nicolas", 20, "1234567890");
-        Pessoa pessoa2 = new Pessoa("Lucas", 29, "1234543212");
-        Pessoa pessoa3 = new Pessoa("Caio", 11, "12345321232");
+//        Pessoa pessoa1 = new Pessoa("Nicolas", 20, "1234567890");
+//        Pessoa pessoa2 = new Pessoa("Lucas", 29, "1234543212");
+//        Pessoa pessoa3 = new Pessoa("Caio", 11, "12345321232");
+//
+//        Pessoa[] arraySimples = {pessoa1, pessoa2, pessoa3};
+//
+//        for (Pessoa pessoa : arraySimples) {
+//            System.out.println(pessoa.getNome() + pessoa.getIdade() + pessoa.getCpf());
+//
+//        }
 
-        Pessoa[] arraySimples = {pessoa1, pessoa2, pessoa3};
+//        Map<String,DadoDemografico>dados = new HashMap<>();
+//        dados.put("Brasil", new DadoDemografico(2010222100, 30));
+//        dados.put("EUA", new DadoDemografico(339096564, 40));
+//        dados.put("Japão", new DadoDemografico(112112121, 45));
+//
+//
+//        DadoDemografico brasil = dados.get("Brasil");
+//        System.out.println(brasil.getIdadedeMediaPopulacao());
+//
+//        dados.put("Brasil", new DadoDemografico(2010222100,31));
+//        System.out.println(dados.get("Brasil").getIdadedeMediaPopulacao());
+//
+//        boolean containsBrasil = dados.containsKey("Brasil");
 
-        for (Pessoa pessoa : arraySimples) {
-            System.out.println(pessoa.getNome() + pessoa.getIdade() + pessoa.getCpf());
+//        Queue<String> fila = new LinkedList<>();
+//
+//        fila.add("Maria");
+//        fila.add("João");
+//        fila.add("Pedro");
+//        fila.add("Carlos");
+//        fila.add("Ana");
+//    //size é pra ver o tamanho
+//        System.out.println(fila.size());
+//    // Consulta para ver quem é o proximo
+//        System.out.println(fila.peek());
+//
+//        System.out.println(fila.size());
+//    // chamar o proximo.Recpera o objeto e remove da fila
+//        System.out.println(fila.poll());
+//
+//        System.out.println(fila.size());
+//
+//        System.out.println(fila.remove("Carlos"));;
 
-        }
+//Ultimo a entrar primeiro a sair
+//        Stack<String> nomes = new Stack<>();
+//        nomes.push("Maria");
+//        nomes.push("João");
+//        nomes.push("Pedro");
+//        nomes.push("Carlos");
+//        nomes.push("Ana");
+//
+//        System.out.println(nomes.size());
+//        System.out.println(nomes.pop());
+//        System.out.println(nomes.size());
+//        System.out.println(nomes.pop());
+//        System.out.println(nomes.size());
+//
+
+        Queue<Pessoa> pessoas = new PriorityQueue<>();
+        pessoas.add(new Pessoa("Ana", 29,"49018797820"));
+        pessoas.add(new Pessoa("Pedro", 40,"36789745621"));
+        pessoas.add(new Pessoa("Ana", 29,"09866748286829"));
+        pessoas.add(new Pessoa("Ana", 29,"018367187363"));
+
+
+        Pessoa proximaChamada = pessoas.peek();
+        System.out.println(proximaChamada.getNome());
 
     }
 }

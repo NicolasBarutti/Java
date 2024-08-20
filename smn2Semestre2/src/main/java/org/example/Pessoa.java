@@ -1,6 +1,8 @@
 package org.example;
 
-public class Pessoa {
+import java.util.Objects;
+
+public class Pessoa implements Comparable<Pessoa> {
 
 
     private String nome;
@@ -28,5 +30,21 @@ public class Pessoa {
         return cpf;
     }
 
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if (o == null || getClass() !=o.getClass())return false;
+        Pessoa pessoa = (Pessoa) o;
+        return idade == pessoa.idade && Objects.equals(nome, pessoa.nome)&& Objects.equals(cpf,pessoa.cpf);
+    }
 
+    @Override
+    public int hashCode(){
+        return Objects.hash(nome,idade,cpf);
+    }
+
+    @Override
+    public int compareTo(Pessoa outraPessoa) {
+        return Integer.compare(outraPessoa.getIdade(), this.idade);
+    }
 }
