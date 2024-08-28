@@ -16,9 +16,13 @@ public class Inventario {
     public void adicionarProduto(String produtos, int quantidade) {
     }
 
-    public void mostrarInventario(){
+    public void mostrarInventario() {
         System.out.println(produtos);
 
+    }
+
+    public static Map<String, Integer> criaInventario(){
+        return new HashMap<>();
     }
 }
 
