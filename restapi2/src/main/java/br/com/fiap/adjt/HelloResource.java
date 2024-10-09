@@ -65,4 +65,16 @@ public class HelloResource {
 
     }
 
+    @DELETE
+    @Path("pessoa/{id}")
+    public Response deletePessoa(@PathParam("id") Long id){
+        if (FakeDb.pessoas.containsKey(id)){
+            FakeDb.pessoas.remove(id);
+            return Response.status(Response.Status.NO_CONTENT).build();
+        }else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+
+    }
+
 }
