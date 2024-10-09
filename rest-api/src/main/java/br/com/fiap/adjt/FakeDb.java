@@ -1,2 +1,6 @@
-package br.com.fiap.adjt;public class FakeDb {
+package br.com.fiap.adjt;
+
+
+
+public class FakeDb {
 }
